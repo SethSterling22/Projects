@@ -25,11 +25,10 @@ def leer_documento(nombre_archivo):
 i = 1
 while True:
     nombre_archivo = "b/" + str(i) + ".txt"
+    os.system("cls" if os.name == "nt" else "clear")  # Limpiar la salida en la consola
     leer_documento(nombre_archivo)
     time.sleep(0.01)
 
     i = (i % 67) + 1
-    
-    os.system("cls")  # Para Windows, usar "clear" en sistemas Unix
 
 # Esta forma imprime lo que hay en lo documentos directamente
